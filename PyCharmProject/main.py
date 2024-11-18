@@ -84,7 +84,7 @@ if text and search_word:
                     st.write(f"    - {neighbor['text']} (Функція в реченні: {neighbor['dep']})")
                 st.write("---")
     st.header("Зберегти результати")
-    output_file_name = st.text_input("Enter output file name (e.g., `results.txt`):", value="results.txt")
+    output_file_name = st.text_input("Введіть назву файлу (наприклад, `results.txt`):", value="results.txt")
     if st.button("Завантажити"):
         output_text = []
         for r in results:
