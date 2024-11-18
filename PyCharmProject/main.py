@@ -49,7 +49,8 @@ if text and search_word:
                         "text": left_neighbor.text,
                         "dep": left_neighbor.dep_
                     })
-                    highlighted_text[token.i - j] = f"<span style='color: green;'>{left_neighbor.text}</span>"
+                    if "<span style='color: red;" not in highlighted_text[token.i - j]:
+                        highlighted_text[token.i - j] = f"<span style='color: green;'>{left_neighbor.text}</span>"
             neighbors["left"] = left_neighbors
 
             right_neighbors = []
